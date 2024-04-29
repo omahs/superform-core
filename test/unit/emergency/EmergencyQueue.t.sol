@@ -755,7 +755,17 @@ contract EmergencyQueueTest is ProtocolActions {
         uint256 superformId = _getTestSuperformId();
 
         SingleVaultSFData memory data = SingleVaultSFData(
-            superformId, 2e18, 2e18, 100, LiqRequest("", dai, address(0), 1, 1, 0), "", false, false, mrperfect, mrperfect, ""
+            superformId,
+            2e18,
+            2e18,
+            100,
+            LiqRequest("", dai, address(0), 1, 1, 0),
+            "",
+            false,
+            false,
+            mrperfect,
+            mrperfect,
+            ""
         );
 
         SingleDirectSingleVaultStateReq memory req = SingleDirectSingleVaultStateReq(data);

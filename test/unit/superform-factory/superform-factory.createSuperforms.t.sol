@@ -206,13 +206,9 @@ contract SuperformFactoryCreateSuperformTest is BaseSetup {
         address formImplementation2 = address(new ERC4626Form(superRegistry));
 
         // Deploying Forms Using AddImplementation. Not Testing Reverts As Already Tested
-        SuperformFactory(getContract(chainId, "SuperformFactory")).addFormImplementation(
-            formImplementation, 420, 1
-        );
+        SuperformFactory(getContract(chainId, "SuperformFactory")).addFormImplementation(formImplementation, 420, 1);
 
-        SuperformFactory(getContract(chainId, "SuperformFactory")).addFormImplementation(
-            formImplementation2, 69, 1
-        );
+        SuperformFactory(getContract(chainId, "SuperformFactory")).addFormImplementation(formImplementation2, 69, 1);
 
         SuperformFactory(getContract(chainId, "SuperformFactory")).createSuperform(420, vault);
         SuperformFactory(getContract(chainId, "SuperformFactory")).createSuperform(69, vault);
